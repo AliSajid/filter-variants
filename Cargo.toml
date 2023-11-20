@@ -18,6 +18,7 @@ name = "filter-variants"
 path = "src/filter_variants/main.rs"
 
 [dependencies]
+clap = { version = "4.4.8", features = ["cargo", "debug", "env", "string", "unicode", "derive"] }
 
 
 [profile.dev]
