@@ -1,0 +1,31 @@
+[package]
+name = "filter-variants"
+version = "1.0.0-alpha.1"
+edition = "2021"
+readme = "README.md"
+description = ""
+rust-version = "1.64.0"
+repository = "https://github.com/AliSajid/filter-variants"
+license = "MIT"
+
+[lib]
+name = "filter_variants_lib"
+path = "src/filter_variants_lib/lib.rs"
+crate-type = ["lib"]
+
+[[bin]]
+name = "filter-variants"
+path = "src/filter_variants/main.rs"
+
+[dependencies]
+
+
+[profile.dev]
+opt-level = 1
+debug = true
+
+[profile.release]
+opt-level = 3
+strip = true
+lto = true
+codegen-units = 1
